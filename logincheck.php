@@ -23,6 +23,8 @@ if (isset($_POST['login-submit'])) {
                 header('Location: login.html?error=wrongpassword1');      //Error -- Wrong Password1
                 exit();
             } else if ($pwdCheck == true) {
+                session_start();
+                $_SESSION['uname'] = $row['uname'];
                 header('Location: profile.php?login=success');      //Login -- Success
                 exit();
             } else {
