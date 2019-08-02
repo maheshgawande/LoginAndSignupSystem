@@ -41,48 +41,48 @@
     <script>
         var textRegx = new RegExp('^[a-zA-Z]{3,}$');
         var unameRegx = new RegExp('^[a-zA-Z0-9]{3,}$');
-        var preventSubmit = false;
+        var formSubmit = false;
 
         $('input[name=fname]').on('keyup', function () {
             if (!textRegx.test(this.value)) {
                 $('input[name=fname]').css('border-color', 'red');
-                return preventSubmit = false;
+                return formSubmit = false;
             } else {
                 $('input[name=fname]').css('border-color', 'green');
-                return preventSubmit = true;
+                return formSubmit = true;
             }
         });
         $('input[name=lname]').on('keyup', function () {
             if (!textRegx.test(this.value)) {
                 $('input[name=lname]').css('border-color', 'red');
-                return preventSubmit = false;
+                return formSubmit = false;
             } else {
                 $('input[name=lname]').css('border-color', 'green');
-                return preventSubmit = true;
+                return formSubmit = true;
             }
         });
         $('input[name=uname]').on('keyup', function () {
             if (!unameRegx.test(this.value)) {
                 $('input[name=uname]').css('border-color', 'red');
-                return preventSubmit = false;
+                return formSubmit = false;
             } else {
                 $('input[name=uname]').css('border-color', 'green');
-                return preventSubmit = true;
+                return formSubmit = true;
             }
         });
 
         $('input[type=password]').on('keyup', function () {
-           if ($('input[name=pwd]').val() != $('input[name=repwd]').val()) {
+           if ($('input[name=pwd]').val() != $('input[name=repwd]').val() || $.trim($('input[name=repwd]').val()) == '') {
                $('input[name=repwd]').css('border-color', 'red');
-               return preventSubmit = false;
+               return formSubmit = false;
            } else {
                $('input[name=repwd]').css('border-color', 'green');
-               return preventSubmit = true;
+               return formSubmit = true;
            }
         });
 
         $('form').submit(function (e) {
-            if (!preventSubmit) {
+            if (!formSubmit) {
                 e.preventDefault();
             }
         });
