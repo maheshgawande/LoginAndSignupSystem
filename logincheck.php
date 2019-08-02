@@ -4,6 +4,7 @@ if (isset($_POST['login-submit'])) {
     require_once 'config.php';
 
     $emailUname = $_POST['emailUname'];
+    $pwd = $_POST['pwd'];
     $sql = 'SELECT uname, email, pwd FROM users WHERE uname=? OR email=?;';
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -17,17 +18,15 @@ if (isset($_POST['login-submit'])) {
             header('Location: login.html?error=nouser');    //Error -- User not available
             exit();
         } else {
-            $dbpass = $row['pwd'];
-            $pwdCheck = password_verify($pwd, $dbpass);
-
+            $pwdCheck = password_verify($pwd, $row['pwd']);
             if ($pwdCheck == false) {
-                header('Location: login.html?error=wrongpassword2');      //Error -- Wrong Password2
+                header('Location: login.html?error=wrongpassword1');      //Error -- Wrong Password1
                 exit();
             } else if ($pwdCheck == true) {
                 header('Location: profile.php?login=success');      //Login -- Success
                 exit();
             } else {
-                header('Location: login.html?error=wrongpassword3');      //Error -- Wrong Password3
+                header('Location: login.html?error=wrongpassword2');      //Error -- Wrong Password2
                 exit();
             }
         }

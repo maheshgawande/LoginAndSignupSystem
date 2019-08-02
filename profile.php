@@ -1,3 +1,3 @@
 <?php
 
-echo 'You have success in login in!';
+echo 'You have successfully loged in!';
