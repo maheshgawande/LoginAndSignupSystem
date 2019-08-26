@@ -11,7 +11,7 @@
             <p><span>fname lname</span></p>
             <p><span>email@xyz.com</span></p>
             <p><span>@username</span></p>
-            <p><span>28/12/2000</span></p>
+            <p><span>31/12/2001</span></p>
             <p><span>**********</span></p>
           </div>
           <div class="attr-values-change">

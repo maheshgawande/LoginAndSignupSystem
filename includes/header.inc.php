@@ -20,11 +20,11 @@
         </div>
         <ul class="nav">
           <li class="nav-logsign">
-            <a href="#">LogIn</a>
+            <a href="../html/login.html">LogIn</a>
             <span>&nbsp;|&nbsp;</span>
-            <a href="#">SignUp</a>
+            <a href="html/signup.html">SignUp</a>
           </li>
-          <li><a href="#">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <title>Log in</title>
+  </head>
+  <body>
+    <div class="card">
+      <img
+        src="../img/user.png"
+        width="100px"
+        height="100px"
+        class="user-img"
+      />
+
+      <h2>Log in here</h2>
+
+      <form action="../includes/logincheck.php" method="post">
+        <div class="input-wrap">
+          <input
+            type="text"
+            name="username"
+            aria-label="username or email"
+            autofocus
+            required
+          />
+          <label for="username" class="input-label">
+            <span class="label-content">Email or Username</span>
+          </label>
+        </div>
+
+        <div class="input-wrap">
+          <input
+            type="password"
+            name="password"
+            aria-label="password"
+            required
+          />
+          <label for="password" class="input-label">
+            <span class="label-content">Password</span>
+          </label>
+        </div>
+        <a href="#">forgot password!</a>
+
+        <input type="submit" value="Log In" />
+      </form>
+    </div>
+  </body>
+</html>
