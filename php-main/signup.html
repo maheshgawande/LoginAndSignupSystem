@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Signup</title>
+</head>
+<body>
+    <p>Signup Here</p>
+    <br>
+    <form action="signupcheck.php" method="post" name="form">
+        <label>First Name</label>
+        <input type="text" name="fname" autofocus required>
+        <br><br>
+        <label>Last Name</label>
+        <input type="text" name="lname" required>
+        <br><br>
+        <label>E-mail</label>
+        <input type="email" name="email" required>
+        <br><br>
+        <label>Username</label>
+        <input type="text" name="uname" required>
+        <br><br>
+        <label>Date of Birth</label>
+        <input type="date" name="dob" required>
+        <br><br>
+        <label>Password</label>
+        <input type="password" name="pwd" id="pwd" required>
+        <br><br>
+        <label>Re-enter Password</label>
+        <input type="password" name="repwd" id="repwd" required>
+        <br><br><br>
+        <input type="submit" name="signup-submit" value="Sign Up" id="submit">
+        <br><br>
+        <input type="reset" value="Reset">
+    </form>
+    <p id="output"></p>
+
+    <script>
+        var textRegx = new RegExp('^[a-zA-Z]{3,}$');
+        var unameRegx = new RegExp('^[a-zA-Z0-9]{3,}$');
+        var formSubmit = false;
+
+        $('input[name=fname]').on('keyup', function () {
+            if (!textRegx.test(this.value)) {
+                $('input[name=fname]').css('border-color', 'red');
+                return formSubmit = false;
+            } else {
+                $('input[name=fname]').css('border-color', 'initial');
+                return formSubmit = true;
+            }
+        });
+        $('input[name=lname]').on('keyup', function () {
+            if (!textRegx.test(this.value)) {
+                $('input[name=lname]').css('border-color', 'red');
+                return formSubmit = false;
+            } else {
+                $('input[name=lname]').css('border-color', 'initial');
+                return formSubmit = true;
+            }
+        });
+        $('input[name=uname]').on('keyup', function () {
+            if (!unameRegx.test(this.value)) {
+                $('input[name=uname]').css('border-color', 'red');
+                return formSubmit = false;
+            } else {
+                $('input[name=uname]').css('border-color', 'initial');
+                return formSubmit = true;
+            }
+        });
+
+        $('input[type=password]').on('keyup', function () {
+           if ($('input[name=pwd]').val() != $('input[name=repwd]').val() || $.trim($('input[name=repwd]').val()) == '') {
+               $('input[name=repwd]').css('border-color', 'red');
+               return formSubmit = false;
+           } else {
+               $('input[name=repwd]').css('border-color', 'initial');
+               return formSubmit = true;
+           }
+        });
+
+        $('form').submit(function (e) {
+            if (!formSubmit) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
