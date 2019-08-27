@@ -50,7 +50,16 @@
             <img src="img/icon-search.svg" alt="search icon" z />
           </label>
         </div>
-        <img src="img/icon-user.svg" alt="user icon" class="user-icon" />
+        <div class="user-icon">
+          <img src="img/icon-user.svg" alt="user icon" />
+          <?php
+            if (!isset($_SESSION['uname'])) {
+              echo '<div class="login-status offline"></div>';
+            } else {
+              echo '<div class="login-status online"></div>';
+            }
+          ?>
+        </div>
         <div class="logsign">
           <?php
             if (!isset($_SESSION['uname'])) {
