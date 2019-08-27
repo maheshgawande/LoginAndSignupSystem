@@ -3,7 +3,7 @@
 ?>
 
 <?php
-    require 'includes/front-page.php';
+    require 'includes/front-page.inc.php';
 ?>
 
 <?php

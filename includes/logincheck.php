@@ -5,30 +5,34 @@ if (isset($_POST['login-submit'])) {
 
     $emailUname = $_POST['emailUname'];
     $pwd = $_POST['pwd'];
-    $sql = 'SELECT uname, email, pwd FROM users WHERE uname=? OR email=?;';
+    $sql = 'SELECT * FROM users WHERE uname=? OR email=?;';
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header('Location: login.html?error=sqlerror1');    //SQL-Error -- 1
+        header('Location: ../html/login.html?error=sqlerror1');    //SQL-Error -- 1
         exit();
     } else {
         mysqli_stmt_bind_param($stmt, 'ss', $emailUname, $emailUname);
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
         if (!$row = mysqli_fetch_assoc($result)) {
-            header('Location: login.html?error=nouser');    //Error -- User not available
+            header('Location: ../html/login.html?error=nouser');    //Error -- User not available
             exit();
         } else {
             $pwdCheck = password_verify($pwd, $row['pwd']);
             if ($pwdCheck == false) {
-                header('Location: login.html?error=wrongpassword1');      //Error -- Wrong Password1
+                header('Location: ../html/login.html?error=wrongpassword1');      //Error -- Wrong Password1
                 exit();
             } else if ($pwdCheck == true) {
                 session_start();
+                $_SESSION['fname'] = $row['fname'];
+                $_SESSION['lname'] = $row['lname'];
+                $_SESSION['email'] = $row['email'];
                 $_SESSION['uname'] = $row['uname'];
-                header('Location: profile.php?login=success');      //Login -- Success
+                $_SESSION['dob'] = $row['dob'];
+                header('Location: ../index.php?login=success');      //Login -- Success
                 exit();
             } else {
-                header('Location: login.html?error=wrongpassword2');      //Error -- Wrong Password2
+                header('Location: ../html/login.html?error=wrongpassword2');      //Error -- Wrong Password2
                 exit();
             }
         }
@@ -36,6 +40,6 @@ if (isset($_POST['login-submit'])) {
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
 } else {
-    header('Location: login.html');
+    header('Location: ../html/login.html?error=accessdenied');
     exit();
 }
