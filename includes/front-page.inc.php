@@ -2,9 +2,7 @@
         <div class="person-info">
           <?php
             if (!isset($_SESSION['uname'])) {
-              echo 'Please&nbsp;<a href="html/login.html">logIn</a>
-              <span>&nbsp;|&nbsp;</span>
-              <a href="html/signup.html">signUp</a>&nbsp;to see you personal info.';
+              echo 'Please&nbsp;<a href="html/login.html">logIn</a>&nbsp;to see you personal info.';
             } else {
               echo '<div class="attr">
                       <p>Name</p>
