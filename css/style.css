@@ -127,7 +127,7 @@ header ul li {
   position: absolute;
   right: 2%;
   top: 70px;
-  padding: 5px 210px;
+  padding: 5px 10px;
   background-color: var(--primary-bg-color);
   transform: translateY(-50%);
   z-index: 9;
