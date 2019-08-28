@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST['signup-submit'])) {
-    require_once 'config.php';
+    require_once '../config.php';
 
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];

@@ -25,9 +25,9 @@
           if (!isset($_SESSION['uname'])) {
             echo '';
           } else {
-            echo '<form action="modify.php" method="post" name="modify">
-                    <input type="submit" value="Update details" name="update" />
-                    <input type="submit" value="Delete account" name="delete" />
+            echo '<form action="php/modify.php" method="post">
+                    <input type="submit" value="Update details" name="modify[update]" />
+                    <input type="submit" value="Delete account" name="modify[delete]" />
                   </form>';
           }
         ?>

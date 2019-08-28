@@ -1,7 +1,6 @@
 <?php
-
 if (isset($_POST['login-submit'])) {
-    require_once 'config.php';
+    require_once '../config.php';
 
     $emailUname = $_POST['emailUname'];
     $pwd = $_POST['pwd'];
@@ -24,6 +23,7 @@ if (isset($_POST['login-submit'])) {
                 exit();
             } else if ($pwdCheck == true) {
                 session_start();
+                $_SESSION['id'] = $row['id'];
                 $_SESSION['fname'] = $row['fname'];
                 $_SESSION['lname'] = $row['lname'];
                 $_SESSION['email'] = $row['email'];
