@@ -222,6 +222,12 @@ main a {
 .person-info div p:nth-child(odd) {
   background-color: #eee;
 }
+main input[type="submit"] {
+  margin-right: 10px;
+  margin-top: 20px;
+  padding: 2px 5px;
+  cursor: pointer;
+}
 /*----- Main -----*/
 
 /*----- Footer css -----*/

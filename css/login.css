@@ -126,13 +126,8 @@ input[type="submit"]:focus {
 }
 
 a {
-  text-decoration: none;
-  font-family: serif;
+  font-size: 14px;
   color: #fff;
-}
-a:hover,
-a:focus {
-  text-decoration: underline;
 }
 @media only screen and (max-width: 540px) {
   .card {

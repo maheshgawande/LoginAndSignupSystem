@@ -18,14 +18,17 @@
                       <p><span>'.$_SESSION['dob'].'</span></p>
                       <p><span>**********</span></p>
                     </div>';
-              echo '<div class="attr-values-change">
-                      <p><a href="#">edit</a></p>
-                      <p><a href="#">update</a></p>
-                      <p><a href="#">change</a></p>
-                      <p><a href="#">upadte</a></p>
-                      <p><a href="#">reset</a></p>
-                    </div>';
             }
           ?>
         </div>
+        <?php
+          if (!isset($_SESSION['uname'])) {
+            echo '';
+          } else {
+            echo '<form action="modify.php" method="post" name="modify">
+                    <input type="submit" value="Update details" name="update" />
+                    <input type="submit" value="Delete account" name="delete" />
+                  </form>';
+          }
+        ?>
       </main>
