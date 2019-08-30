@@ -5,7 +5,6 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
 body {
   min-width: 460px;
   padding-top: 80px;
@@ -13,7 +12,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
-
 .card {
   width: 60%;
   margin: auto;
@@ -35,14 +33,12 @@ img {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
-
 h2 {
   text-align: center;
   padding: 10px 0;
   background-color: #1aa3ff;
   width: 100%;
 }
-
 form {
   padding: 20px 40px 0 40px;
 }
@@ -57,7 +53,6 @@ form {
 .block > div:last-child {
   flex-grow: 1;
 }
-
 .input-wrap {
   margin-bottom: 20px;
   position: relative;
@@ -100,7 +95,6 @@ form {
   font-size: 14px;
   color: #5d9cef;
 }
-
 input[type="submit"] {
   width: 100%;
   border: none;
@@ -118,13 +112,13 @@ input[type="submit"]:focus {
   cursor: pointer;
   background-color: #0066ff;
 }
-a {
-  text-decoration: none;
+p {
+  padding-left: 10px;
+  font-size: 14px;
   color: #fff;
-  font-family: serif;
 }
-a:hover {
-  text-decoration: underline;
+a {
+  color: #fff;
 }
 @media only screen and (max-width: 540px) {
   .card {
