@@ -12,10 +12,10 @@
                       <p>Password</p>
                     </div>';
               echo '<div class="attr-values">
-                      <p><span>'.$_SESSION['fname'].' '.$_SESSION['lname'].'</span></p>
-                      <p><span>'.$_SESSION['email'].'</span></p>
-                      <p><span>'.$_SESSION['uname'].'</span></p>
-                      <p><span>'.$_SESSION['dob'].'</span></p>
+                      <p><span>'.$fname.' '.$lname.'</span></p>
+                      <p><span>'.$email.'</span></p>
+                      <p><span>'.$uname.'</span></p>
+                      <p><span>'.$dob.'</span></p>
                       <p><span>**********</span></p>
                     </div>';
             }

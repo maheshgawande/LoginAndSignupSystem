@@ -11,13 +11,13 @@ if (isset($_POST['signup-submit'])) {
     $pwd = $_POST['pwd'];
     $repwd = $_POST['repwd'];
 
-    $sql = "SELECT uname FROM users WHERE uname=?;";
+    $sql = "SELECT id FROM users WHERE email=? OR uname=?;";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header('Location: ../html/signup.html?error=sqlerror1');    //SQL-Error -- 1
         exit();
     } else {
-        mysqli_stmt_bind_param($stmt, 's', $uname);
+        mysqli_stmt_bind_param($stmt, 'ss', $email ,$uname);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_store_result($stmt);
         $resultChk = mysqli_stmt_num_rows($stmt);
