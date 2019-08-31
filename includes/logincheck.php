@@ -18,7 +18,7 @@ if (isset($_POST['login-submit'])) {
         } else {
             $pwdCheck = password_verify($pwd, $row['pwd']);
             if ($pwdCheck == false) {
-                header('Location: ../html/login.html?error=wrongpwd1');
+                header('Location: ../html/login.html?error=wrongpwd');
                 exit();
             } else if ($pwdCheck == true) {
                 session_start();

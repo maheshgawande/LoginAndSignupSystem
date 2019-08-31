@@ -228,6 +228,15 @@ main input[type="submit"] {
   padding: 2px 5px;
   cursor: pointer;
 }
+main input[name="pwd-reset"] {
+  margin-top: 0;
+  border: 0;
+  background-color: transparent;
+  color: blue;
+}
+main input[name="pwd-reset"]:hover {
+  text-decoration: underline;
+}
 /*----- Main -----*/
 
 /*----- Footer css -----*/
