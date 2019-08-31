@@ -1,7 +1,7 @@
       <main>
         <div class="person-info">
           <?php
-            if (!isset($_SESSION['uname'])) {
+            if (!isset($_SESSION['id'])) {
               echo 'Please&nbsp;<a href="html/login.html">logIn</a>&nbsp;to see you personal info.';
             } else {
               echo '<div class="attr">
@@ -22,7 +22,7 @@
           ?>
         </div>
         <?php
-          if (!isset($_SESSION['uname'])) {
+          if (!isset($_SESSION['id'])) {
             echo '';
           } else {
             echo '<form action="php/modify.php" method="post">

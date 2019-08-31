@@ -21,12 +21,12 @@
         <ul class="nav">
           <li class="nav-logsign">
             <?php
-              if (!isset($_SESSION['uname'])) {
+              if (!isset($_SESSION['id'])) {
                 echo '<a href="html/login.html">login</a>
                 <span>&nbsp;|&nbsp;</span>
                 <a href="html/signup.html">signup</a>';
               } else {
-                echo '<span>'.$_SESSION['uname'].'</span>&nbsp;|&nbsp;<a href="includes/logout.php">logout</a>';
+                echo '<span>'.$uname.'</span>&nbsp;|&nbsp;<a href="includes/logout.php">logout</a>';
               }
             ?>
           </li>
@@ -50,7 +50,7 @@
         <div class="user-icon">
           <img src="img/icon-user.svg" alt="user icon" />
           <?php
-            if (!isset($_SESSION['uname'])) {
+            if (!isset($_SESSION['id'])) {
               echo '<div class="login-status offline"></div>';
             } else {
               echo '<div class="login-status online"></div>';
@@ -59,12 +59,12 @@
         </div>
         <div class="logsign">
           <?php
-            if (!isset($_SESSION['uname'])) {
+            if (!isset($_SESSION['id'])) {
               echo '<a href="html/login.html">login</a>
               <span>&nbsp;|&nbsp;</span>
               <a href="html/signup.html">signup</a>';
             } else {
-              echo '<span>'.$_SESSION['uname'].'</span>&nbsp;|&nbsp;<a href="includes/logout.php">logout</a>';
+              echo '<span>'.$uname.'</span>&nbsp;|&nbsp;<a href="includes/logout.php">logout</a>';
             }
           ?>
         </div>

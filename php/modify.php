@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if (!isset($_SESSION['uname'])) {
+    if (!isset($_SESSION['id'])) {
         header('Location: 404.php?error=nosession');
     } else {
         if (!isset($_POST['modify'])) {
