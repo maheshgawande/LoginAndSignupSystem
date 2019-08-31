@@ -16,7 +16,7 @@
                       <p><span>'.$email.'</span></p>
                       <p><span>'.$uname.'</span></p>
                       <p><span>'.$dob.'</span></p>
-                      <p><span>**********</span></p>
+                      <p><span><form action="php/reset.php" method="post" style="background-color:#eee;"><input type="submit" value="Reset password" name="pwd-reset" /></form></span></p>
                     </div>';
             }
           ?>
