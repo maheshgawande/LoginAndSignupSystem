@@ -10,7 +10,7 @@
       async
     />
     <link rel="stylesheet" href="css/style.css" defer />
-    <title>Document</title>
+    <title>Index</title>
   </head>
   <body>
     <div class="container">
@@ -31,10 +31,10 @@
             ?>
           </li>
           <li><a href="index.php">Home</a></li>
-          <li><a href="html/services.html">Services</a></li>
-          <li><a href="html/about.html">About</a></li>
-          <li><a href="html/contact.html">Contact</a></li>
-          <li><a href="html/faq.html">FAQ</a></li>
+          <li><a href="php/services.php">Services</a></li>
+          <li><a href="php/about.php">About</a></li>
+          <li><a href="php/contact.php">Contact</a></li>
+          <li><a href="php/faq.php">FAQ</a></li>
         </ul>
         <div class="header-search">
           <input

@@ -23,6 +23,7 @@
           <input
             type="text"
             name="emailUname"
+            id="username"
             aria-label="username or email"
             autofocus
             required
@@ -33,14 +34,20 @@
         </div>
 
         <div class="input-wrap">
-          <input type="password" name="pwd" aria-label="password" required />
+          <input
+            type="password"
+            name="pwd"
+            id="pwd"
+            aria-label="password"
+            required
+          />
           <label for="password" class="input-label">
             <span class="label-content">Password</span>
           </label>
         </div>
         <a href="#">forgot password!</a>
 
-        <input type="submit" name="login-submit" value="Log In" />
+        <input type="submit" id="submit" name="login-submit" value="Log In" />
       </form>
       <br /><br /><br />
       <p style="padding-left: 10px; font-size: 14px; color: #fff;">

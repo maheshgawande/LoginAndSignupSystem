@@ -29,33 +29,33 @@
                 echo '<form action="../includes/modifycheck.php" method="post" name="form">';
                 echo '<div class="block">
                         <div class="input-wrap">
-                            <input type="text" name="fname" value="'.$_SESSION['fname'].'" autofocus required />
+                            <input type="text" name="fname" autofocus required />
                             <label for="fname" class="input-label">
                                 <span class="label-content">First name</span>
                             </label>
                         </div>
 
                         <div class="input-wrap">
-                            <input type="text" name="lname" value="'.$_SESSION['lname'].'" required />
+                            <input type="text" name="lname" value="" required />
                             <label for="lname" class="input-label">
                                 <span class="label-content">Last name</span>
                             </label>
                         </div>
                     </div>';
                 echo '<div class="input-wrap">
-                        <input type="email" name="email" value="'.$_SESSION['email'].'" required />
+                        <input type="email" name="email" value="" required />
                         <label for="email" class="input-label">
                         <span class="label-content">E-mail</span>
                         </label>
                     </div>';
                 echo '<div class="input-wrap">
-                        <input type="text" name="uname" value="'.$_SESSION['uname'].'" required />
+                        <input type="text" name="uname" value="" required />
                         <label for="uname" class="input-label">
                         <span class="label-content">User name</span>
                         </label>
                     </div>';
                 echo '<div class="input-wrap">
-                        <input type="date" name="dob" value="'.$_SESSION['dob'].'" required />
+                        <input type="date" name="dob" value="" required />
                         <label for="dob" class="input-label">
                         <span class="label-content"></span>
                         </label>
